@@ -2,7 +2,7 @@
   "name": "note-keeping",
   "version": "1.0.0",
   "description": "Create a REST API using Node.js, Express.js, and MongoDB for a note-keeping application. The application should allow users to perform CRUD operations on notes.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,7 +26,6 @@
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "mongodb": "^6.18.0",
     "mongoose": "^8.18.0"
   }
 }
