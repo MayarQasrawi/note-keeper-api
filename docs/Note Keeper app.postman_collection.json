@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "5eff995a-319e-48b5-b48f-9c8739d518a6",
+		"name": "Note Keeper app",
+		"description": "Note-keeping REST API built with Node.js, Express.js, and MongoDB featuring CRUD operations, search functionality, and pagination",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43300328",
+		"_collection_link": "https://speeding-resonance-413552.postman.co/workspace/cf555425-80b6-4206-8650-1ee14e675018/collection/43300328-5eff995a-319e-48b5-b48f-9c8739d518a6?action=share&source=collection_link&creator=43300328"
+	},
+	"item": [
+		{
+			"name": "Add new note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My first note\",\r\n  \"content\": \"This is the content of the note\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/notes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "Using postman to test",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Test the api",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all notes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My first note\",\r\n  \"content\": \"This is the content of the note\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/notes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "Using postman to test",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Test the api",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get note by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My first note\",\r\n  \"content\": \"This is the content of the note\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/notes/68ad8522c9de386005ca3306",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						"68ad8522c9de386005ca3306"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "Using postman to test",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Test the api",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search for a note",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My first note\",\r\n  \"content\": \"This is the content of the note\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/notes/search?query=My first note",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						"search"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "Using postman to test",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Test the api",
+							"disabled": true
+						},
+						{
+							"key": "query",
+							"value": "My first note"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/v1/notes/68ad8522c9de386005ca3306",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						"68ad8522c9de386005ca3306"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Updated Title\",\r\n  \"content\": \"This is the new content\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/v1/notes/68ad88bec9de386005ca3314",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"notes",
+						"68ad88bec9de386005ca3314"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
