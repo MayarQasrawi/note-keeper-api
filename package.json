@@ -4,7 +4,8 @@
   "description": "Create a REST API using Node.js, Express.js, and MongoDB for a note-keeping application. The application should allow users to perform CRUD operations on notes.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   "dependencies": {
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "mongoose": "^8.18.0"
+    "mongoose": "^8.18.0",
+    "nodemon": "^3.1.10"
   }
 }

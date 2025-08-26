@@ -15,7 +15,9 @@ const noteSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   }
-});
+} 
+// , { versionKey: false }
+);
 
 // Create text index for search functionality based on title and content
 noteSchema.index({ title: 'text', content: 'text' });
