@@ -20,7 +20,7 @@ const noteSchema = new mongoose.Schema({
 );
 
 // Create text index for search functionality based on title and content
-noteSchema.index({ title: 'text', content: 'text' });
+// noteSchema.index({ title: 'text', content: 'text' });
 
 // Creates a Mongoose model called Note based on noteSchema.
 module.exports = mongoose.model('Note', noteSchema);

@@ -122,13 +122,20 @@ const searchNotes = async (req, res, next) => {
     const { query } = req.query;
 
     if (!query) {
-      return res.status(400).json({
-        success: false,
-        error: 'Search query is required'
-      });
+      return res.status(400).json({ success: false, error: 'Search query is required' });
     }
 
-    const notes = await Note.find({ $text: { $search: query } });
+    const notes = await Note.aggregate([
+      {
+        $search: {
+          index: 'default', // name of Atlas search index
+          text: {
+            query: query,
+            path: ['title', 'content'] // fields to search
+          }
+        }
+      }
+    ]);
 
     res.status(200).json({
       success: true,
@@ -139,6 +146,7 @@ const searchNotes = async (req, res, next) => {
     next(error);
   }
 };
+
 
 module.exports = {
   getNotes,
