@@ -90,6 +90,7 @@ const updateNote = async (req, res, next) => {
   
 };
 
+}
 // @desc    Delete note
 // @route   DELETE /notes/:id
 const deleteNote = async (req, res, next) => {
