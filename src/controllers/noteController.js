@@ -87,7 +87,7 @@ const updateNote = async (req, res, next) => {
     });
   } catch (error) {
     next(error);
-  }
+  
 };
 
 // @desc    Delete note
